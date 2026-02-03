@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MACD Indicator — Stock Market Learning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div class="layout-wrapper">
+        <aside class="sidebar">
+            <a href="../index.html" class="back-home">← Back to Index</a>
+            <nav class="sidebar-nav">
+                <h4>On this page</h4>
+                <a href="#definition">Definition</a>
+                <a href="#explanation">Simple Explanation</a>
+                <a href="#analogy">Real-Life Analogy</a>
+                <a href="#signals">Key Signals</a>
+                <a href="#rules">Thumb Rules</a>
+                <a href="#summary">Summary</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section id="header">
+                <h1>MACD (Moving Average Convergence Divergence)</h1>
+                <p class="topic-meta">Technical Analysis • Topic 15</p>
+                <div class="card">
+                    <p>MACD is a momentum/trend-following indicator that shows the relationship between two moving
+                        averages. It helps traders identify early trend reversals and momentum shifts before they appear
+                        on the price chart.</p>
+                </div>
+            </section>
+
+            <section id="definition">
+                <h2>Definition</h2>
+                <div class="card">
+                    <ul>
+                        <li><strong>MACD Line:</strong> The difference between two EMAs (usually 12 and 26).</li>
+                        <li><strong>Signal Line:</strong> An average of the MACD line itself.</li>
+                        <li><strong>Histogram:</strong> The distance between the two lines.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="explanation">
+                <h2>Simple Explanation</h2>
+                <ul>
+                    <li><strong>The "Early Warning" System:</strong> While Moving Averages (MAs) are "lagging"
+                        indicators, MACD tries to solve this by providing signals a few steps earlier.</li>
+                    <li><strong>Momentum Strength:</strong> A growing histogram (bars getting taller) means the current
+                        trend is getting stronger. Bars getting shorter means the trend is losing steam.</li>
+                </ul>
+            </section>
+
+            <section id="analogy">
+                <h2>Real-Life Analogy</h2>
+                <div class="pro-insight" style="background: #e8f0fe; border-left: 5px solid var(--primary);">
+                    <h3>The Speeding Car</h3>
+                    <p>Imagine a car accelerating to 100 km/h.</p>
+                    <ul>
+                        <li><strong>Price:</strong> The car's position on the road.</li>
+                        <li><strong>MACD:</strong> The car's accelerator (gas pedal).</li>
+                    </ul>
+                    <p>Even if the car is still moving forward (Price is rising), if the driver takes their foot off the
+                        gas pedal (MACD turns down), you know the car will slow down or stop soon. MACD shows you what
+                        the driver (market momentum) is doing before the car (price) actually stops.</p>
+                </div>
+            </section>
+
+            <section id="signals">
+                <h2>Key MACD Signals</h2>
+                <div class="topic-grid">
+                    <div class="card" style="border-top: 5px solid var(--success);">
+                        <strong>Bullish Crossover</strong>
+                        <p>MACD line crosses ABOVE the Signal line. Momentum is turning positive.</p>
+                    </div>
+                    <div class="card" style="border-top: 5px solid var(--danger);">
+                        <strong>Bearish Crossover</strong>
+                        <p>MACD line crosses BELOW the Signal line. Momentum is turning negative.</p>
+                    </div>
+                    <div class="card" style="border-top: 5px solid var(--primary);">
+                        <strong>Zero-Line Cross</strong>
+                        <p>Above Zero = Bullish zone. Below Zero = Bearish zone.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="rules">
+                <h2>Thumb Rules</h2>
+                <ul class="checklist">
+                    <li>Only buy when the MACD is above its Signal line.</li>
+                    <li>The strongest buy signals happen when the Bullish Crossover occurs below the Zero line.</li>
+                    <li>Never use MACD alone in a "Sideways" market—it will give many false signals.</li>
+                </ul>
+            </section>
+
+            <section id="summary">
+                <div class="summary-footer">
+                    <h2>Ultra-Short Summary</h2>
+                    <ul>
+                        <li>MACD = Trend + Momentum combined.</li>
+                        <li>Early Warning system for reversals.</li>
+                        <li>Best used alongside Support/Resistance and RSI.</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+<script src="../script.js"></script></body>
+
+</html>

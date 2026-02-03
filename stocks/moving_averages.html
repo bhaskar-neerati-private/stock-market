@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Moving Averages — Stock Market Learning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div class="layout-wrapper">
+        <aside class="sidebar">
+            <a href="../index.html" class="back-home">← Back to Index</a>
+            <nav class="sidebar-nav">
+                <h4>On this page</h4>
+                <a href="#definition">Definition</a>
+                <a href="#explanation">Simple Explanation</a>
+                <a href="#analogy">Real-Life Analogy</a>
+                <a href="#key-mas">Key MAs to Track</a>
+                <a href="#rules">Interpretation Rules</a>
+                <a href="#summary">Summary</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section id="header">
+                <h1>Moving Averages (MA & EMA)</h1>
+                <p class="topic-meta">Technical Analysis • Topic 11</p>
+                <div class="card">
+                    <p>A Moving Average is a technical indicator that smooths out price action by filtering out the
+                        "noise" of random short-term price fluctuations. It is a trend-following indicator because it is
+                        based on past prices.</p>
+                </div>
+            </section>
+
+            <section id="definition">
+                <h2>Definition</h2>
+                <div class="card">
+                    <ul>
+                        <li><strong>SMA (Simple Moving Average):</strong> The average price over a specific number of
+                            days.</li>
+                        <li><strong>EMA (Exponential Moving Average):</strong> Similar to SMA but gives more weight to
+                            recent prices, making it react faster.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="explanation">
+                <h2>Simple Explanation</h2>
+                <ul>
+                    <li><strong>The "Traffic" Filter:</strong> Imagine looking at the stock price as a zig-zag graph of
+                        every single car on a road. The Moving Average is the average speed of all those cars. It shows
+                        you the overall flow of traffic, not the movement of one single aggressive driver.</li>
+                    <li><strong>Trend Compass:</strong> If the price is above the MA, the trend is UP. If below, the
+                        trend is DOWN.</li>
+                </ul>
+            </section>
+
+            <section id="analogy">
+                <h2>Real-Life Analogy</h2>
+                <div class="pro-insight">
+                    <h3>The Fitness Journey</h3>
+                    <p>Imagine you weigh yourself every morning. Some days you weigh more because of water retention;
+                        some days less because you missed a meal.</p>
+                    <ul>
+                        <li><strong>Daily Weight:</strong> Stock Price (Volatile/Noisy)</li>
+                        <li><strong>7-Day Average:</strong> Moving Average (The <em>True</em> Trend)</li>
+                    </ul>
+                    <p>If your daily weight is higher today but your 7-day average is consistently falling, you are
+                        still successfully losing weight! The average tells the real story.</p>
+                </div>
+            </section>
+
+            <section id="key-mas">
+                <h2>The Golden Numbers</h2>
+                <div class="topic-grid">
+                    <div class="card">
+                        <strong>20-Day EMA</strong>
+                        <p>Used by short-term traders for momentum. Often called the "institutional line."</p>
+                    </div>
+                    <div class="card">
+                        <strong>50-Day MA</strong>
+                        <p>The medium-term trend. Used to spot healthy corrective dips in an uptrend.</p>
+                    </div>
+                    <div class="card">
+                        <strong>200-Day MA</strong>
+                        <p><strong>The Ultimate Baseline.</strong> If the price is below this, the stock is in a "Bear
+                            Market". Pro investors rarely buy long-term if price is below this.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="rules">
+                <h2>Core Interpretation Rules</h2>
+                <ul class="checklist">
+                    <li>Price stays above MA → Buyers are in control.</li>
+                    <li>MA is sloping upwards → The trend is healthy.</li>
+                    <li>Price is too far above the MA → The stock is "Overextended" and might pull back soon ("Mean
+                        Reversion").</li>
+                </ul>
+            </section>
+
+            <section id="summary">
+                <div class="summary-footer">
+                    <h2>Ultra-Short Summary</h2>
+                    <ul>
+                        <li>MA = Price Smoothing Tool.</li>
+                        <li>EMA = Fast reaction. SMA = Slow & Stable.</li>
+                        <li>Price > 200-Day MA = Bullish. Price < 200-Day MA=Bearish.</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+<script src="../script.js"></script></body>
+
+</html>
