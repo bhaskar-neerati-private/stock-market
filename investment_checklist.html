@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Master Investment Checklist — Before You Buy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --success: #34a853;
+            --warning: #fbbc04;
+            --danger: #ea4335;
+            --dark: #202124;
+            --gray: #5f6368;
+            --light: #f8f9fa;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #fff;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 280px;
+            padding: 30px;
+            background: var(--light);
+            border-right: 1px solid #dadce0;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px 0;
+            text-decoration: none;
+            color: var(--gray);
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .sidebar a:hover {
+            color: var(--primary);
+        }
+
+        .sidebar .back-link {
+            font-weight: bold;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            color: var(--primary);
+        }
+
+        .content {
+            flex: 1;
+            padding: 60px 80px;
+            max-width: 1000px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #dadce0;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--dark);
+        }
+
+        .badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .badge-fundamental {
+            background: #e8f0fe;
+            color: var(--primary);
+        }
+
+        .badge-technical {
+            background: #e6f4ea;
+            color: var(--success);
+        }
+
+        .badge-risk {
+            background: #fef7e0;
+            color: #b06000;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f1f3f4;
+        }
+
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+
+        .checkbox {
+            width: 22px;
+            height: 22px;
+            border: 2px solid var(--primary);
+            border-radius: 4px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 3px;
+        }
+
+        .item-text strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .item-text p {
+            margin: 0;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .pro-tip {
+            background: #fff8e1;
+            border-left: 4px solid var(--warning);
+            padding: 15px 20px;
+            margin-top: 15px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: static;
+            }
+
+            .content {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <aside class="sidebar">
+            <a href="index.html" class="back-link">← Back to Index</a>
+            <h3>Checklist Navigation</h3>
+            <a href="#structural">1. Structural Integrity</a>
+            <a href="#valuation">2. Valuation Reality Check</a>
+            <a href="#efficiency">3. Business Efficiency</a>
+            <a href="#technical">4. Technical Confirmation</a>
+            <a href="#risk">5. The "Red Flag" Scan</a>
+            <a href="#final">Final Verdict Guide</a>
+        </aside>
+
+        <main class="content">
+            <h1>Master Investment Checklist</h1>
+            <p class="subtitle">The complete 5-step framework to validate a stock before hitting "Buy".</p>
+
+            <section id="structural">
+                <div class="card">
+                    <h2><span class="badge badge-fundamental">Step 1</span> Structural Integrity</h2>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-text">
+                            <strong>Market Cap & Liquidity</strong>
+                            <p>Is the company large enough for your risk appetite? Ensure there is enough delivery
+                                volume so you aren't stuck in a "lower circuit" trap.</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-text">
+                            <strong>Debt-to-Equity (D/E) Check</strong>
+                            <p>Ideally D/E < 1.0. High debt kills companies during recessions. Check if the Interest
+                                    Coverage Ratio is> 3 (can they pay their interest comfortably?).</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-text">
+                            <strong>Promoter Holding</strong>
+                            <p>Do the founders believe in the company? Look for > 50% holding.
+                                <strong>CRITICAL:</strong> Check if promoters have pledged (loaned against) their
+                                shares. Pledging > 25% is a major red flag.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="valuation">
+                <div class="card">
+                    <h2><span class="badge badge-fundamental">Step 2</span> Valuation Reality Check</h2>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-text">
+                            <strong>Relative P/E Ratio</strong>
+                            <p>Compare stock P/E with Industry P/E. A stock at 50 P/E in an industry of 20 P/E is
+                                expensive unless it's growing at 3x the industry rate.</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-text">
+                            <strong>P/B vs Book Value</strong>
+                            <p>For banks and manufacturing, is the Price-to-Book ratio reasonable? A P/B < 1.0 might be
+                                    a bargain or a "value trap." </p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-text">
+                            <strong>PEG Ratio (Pro Addition)</strong>
+                            <p>Price/Earnings to Growth. A PEG < 1.0 means you are paying a fair price for the growth
+                                    you are getting.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="efficiency">
+                <div class="card">
+                    <h2><span class="badge badge-fundamental">Step 3</span> Business Efficiency</h2>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-text">
+                            <strong>ROE & ROCE</strong>
+                            <p>Return on Equity (ROE) should ideally be > 15-20%. It shows how well management uses your
+                                money. ROCE shows how well they use *all* capital including debt.</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-text">
+                            <strong>Profit Margin Trends</strong>
+                            <p>Are Operating Profit Margins (OPM) stable or rising? Falling margins mean the company is
+                                losing its competitive edge (Moat).</p>
+                        </div>
+                    </div>
+                    <div class="pro-tip">
+                        <strong>Pro Tip:</strong> High ROE with High Debt is fake. Always look for High ROE with Low
+                        Debt.
+                    </div>
+                </div>
+            </section>
+
+            <section id="technical">
+                <div class="card">
+                    <h2><span class="badge badge-technical">Step 4</span> Technical Confirmation</h2>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-text">
+                            <strong>Moving Average Alignment</strong>
+                            <p>Is the price above the 200-day MA? Never fight the long-term trend. Ideally, 50-day MA
+                                should be above 200-day MA (Golden Cross).</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-text">
+                            <strong>RSI & Momentum</strong>
+                            <p>Is RSI between 40 and 60? Avoid buying at RSI > 70 (Overbought). Catching a bounce at RSI
+                                30 near Support is a high-probability trade.</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-text">
+                            <strong>Volume Confirmation</strong>
+                            <p>Was the recent price rise supported by high "Delivery Volume %"? If not, the move might
+                                be a "fake-out" by operators.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="risk">
+                <div class="card">
+                    <h2><span class="badge badge-risk">Step 5</span> The "Red Flag" Scan</h2>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-text">
+                            <strong>Cash Flow Analysis</strong>
+                            <p>Is "Net Profit" translating into "Cash from Operations"? If a company shows profit but
+                                the bank account is empty, it's accounting manipulation.</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="item-text">
+                            <strong>Legal & Regulatory</strong>
+                            <p>Any pending SEBI investigations or major court cases against promoters? One bad legal
+                                news can wipe 50% of the value in a day.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="final">
+                <div class="card" style="border-color: var(--primary); background: #e8f0fe;">
+                    <h2>The Final Verdict</h2>
+                    <p>Before you invest, ask: <strong>"If the market closes for 5 years, would I still be happy owning
+                            this?"</strong></p>
+                    <ul>
+                        <li>If Fundamentals are good but Technicals are bad → <strong>Wait/Watchlist</strong></li>
+                        <li>If Technicals are good but Fundamentals are bad → <strong>Short-term Trade Only</strong>
+                        </li>
+                        <li>If BOTH are good → <strong>Strong Investment Candidate</strong></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+<script src="script.js"></script></body>
+
+</html>

@@ -1,0 +1,394 @@
+:root {
+    /* Professional Fintech Palette - Light */
+    --primary: #0050b3;
+    /* Deep Royal Blue */
+    --primary-dark: #003a8c;
+    --secondary: #475569;
+    /* Slate Grey */
+    --success: #059669;
+    /* Emerald */
+    --warning: #d97706;
+    /* Amber */
+    --danger: #dc2626;
+    /* Crimson */
+
+    /* Semantic Colors */
+    --bg-body: #f8fafc;
+    /* Subtle Cool Grey */
+    --bg-sidebar: #ffffff;
+    --bg-card: #ffffff;
+    --border: #e2e8f0;
+    /* Light Slate Border */
+    --text-main: #1e293b;
+    /* Slate 800 - Softer than pure black */
+    --text-muted: #64748b;
+    /* Slate 500 */
+    --shadow-sm: 0 1px 2px 0 rgba(73, 85, 107, 0.05);
+    /* Proper colored shadow */
+    --shadow-md: 0 4px 6px -1px rgba(73, 85, 107, 0.1), 0 2px 4px -1px rgba(73, 85, 107, 0.06);
+
+    /* Feature Colors */
+    --code-bg: #f1f5f9;
+    --insight-bg: #eff6ff;
+    /* Blue 50 */
+    --warning-bg: #fffbeb;
+    /* Amber 50 */
+    --danger-bg: #fef2f2;
+    /* Red 50 */
+}
+
+[data-theme="dark"] {
+    /* Professional Fintech Palette - Dark */
+    --primary: #60a5fa;
+    /* Blue 400 - Accessible on dark */
+    --primary-dark: #3b82f6;
+    --secondary: #94a3b8;
+    /* Slate 400 */
+    --success: #34d399;
+    /* Emerald 400 */
+    --warning: #fbbf24;
+    /* Amber 400 */
+    --danger: #f87171;
+    /* Red 400 */
+
+    /* Semantic Colors */
+    --bg-body: #0f172a;
+    /* Slate 900 - Rich Dark Blue/Grey */
+    --bg-sidebar: #1e293b;
+    /* Slate 800 */
+    --bg-card: #1e293b;
+    /* Slate 800 */
+    --border: #334155;
+    /* Slate 700 */
+    --text-main: #f1f5f9;
+    /* Slate 100 */
+    --text-muted: #94a3b8;
+    /* Slate 400 */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+
+    /* Feature Colors */
+    --code-bg: #020617;
+    /* Slate 950 */
+    --insight-bg: #172554;
+    /* Blue 950 */
+    --warning-bg: #451a03;
+    /* Amber 950 */
+    --danger-bg: #450a0a;
+    /* Red 950 */
+}
+
+body {
+    margin: 0;
+    /* Modern System Font Stack */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+    background-color: var(--bg-body);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.layout-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 280px;
+    background: var(--bg-sidebar);
+    border-right: 1px solid var(--border);
+    padding: 40px 30px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.back-home {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 40px;
+    font-size: 0.95rem;
+}
+
+.back-home:hover {
+    color: var(--primary-dark);
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar-nav h4 {
+    margin: 0 0 10px 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--secondary);
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.sidebar-nav a:hover {
+    background: var(--insight-bg);
+    color: var(--primary);
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 60px 80px;
+    max-width: 1000px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+strong {
+    color: var(--text-main);
+}
+
+section {
+    margin-bottom: 80px;
+    scroll-margin-top: 40px;
+}
+
+/* Card Components */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow-md);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.topic-meta {
+    margin-bottom: 40px;
+    color: var(--secondary);
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+/* Specialized Insight Boxes */
+.pro-insight {
+    background: var(--insight-bg);
+    border-left: 5px solid var(--primary);
+    padding: 25px;
+    border-radius: 0 8px 8px 0;
+    margin: 30px 0;
+}
+
+.pro-insight h3 {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.warning-box {
+    background: var(--warning-bg);
+    border-left: 5px solid var(--warning);
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+    margin: 25px 0;
+    color: var(--text-main);
+}
+
+.danger-box {
+    background: var(--danger-bg);
+    border-left: 5px solid var(--danger);
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+    margin: 25px 0;
+    color: var(--text-main);
+}
+
+/* Formula Styling */
+.formula {
+    background: var(--code-bg);
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    display: block;
+    margin: 15px 0;
+    color: var(--primary);
+    overflow-x: auto;
+}
+
+/* Responsive Grid/List */
+.checklist {
+    list-style: none;
+    padding: 0;
+}
+
+.checklist li {
+    background: var(--bg-card);
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.checklist li::before {
+    content: "✓";
+    color: var(--success);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Footer / Summary Area */
+.summary-footer {
+    background: #202124;
+    /* Keep dark in both modes for contrast, or use tertiary */
+    color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    margin-top: 60px;
+}
+
+[data-theme="dark"] .summary-footer {
+    background: #2d2e30;
+    /* Slightly lighter in dark mode */
+}
+
+.summary-footer strong {
+    color: #fff;
+}
+
+.summary-footer h2 {
+    color: #fff;
+}
+
+/* Toggle Button */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: transform 0.2s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        padding: 40px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .layout-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        max-height: 70px;
+        /* Collapsed state */
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        padding: 15px 20px;
+        box-sizing: border-box;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        display: block;
+        /* Override flex */
+    }
+
+    .sidebar:hover,
+    .sidebar:active,
+    .sidebar:focus-within {
+        max-height: 500px;
+        /* Expanded state */
+        overflow-y: auto;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .back-home {
+        margin-bottom: 0;
+        justify-content: space-between;
+    }
+
+    .back-home::after {
+        content: "☰ Menu";
+        font-size: 0.9rem;
+        color: var(--secondary);
+        background: var(--bg-body);
+        padding: 4px 10px;
+        border-radius: 4px;
+        border: 1px solid var(--border);
+    }
+
+    .sidebar-nav {
+        margin-top: 20px;
+        /* Space after expanding */
+    }
+
+    .main-content {
+        padding: 30px 20px;
+    }
+}

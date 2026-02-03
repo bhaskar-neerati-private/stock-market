@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Investment Mastery Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Index-specific Layout Overrides using Global Variables */
+        body {
+            padding: 40px 20px;
+            background: var(--bg-body);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        .tagline {
+            color: var(--text-muted);
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        .section-header {
+            font-size: 1.4rem;
+            color: var(--text-main);
+            margin: 30px 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-header::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .topic-card {
+            padding: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .topic-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(26, 115, 232, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .topic-card .number {
+            font-weight: bold;
+            color: var(--primary);
+            background: var(--insight-bg);
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .topic-card .title {
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .master-cta {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 40px;
+            text-decoration: none;
+            display: block;
+            box-shadow: 0 6px 20px rgba(26, 115, 232, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .master-cta:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(26, 115, 232, 0.4);
+        }
+
+        .master-cta h2 {
+            margin: 0 0 10px;
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .master-cta p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .footer-note {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Specific fix for Getting Started Card in Dark Mode */
+        .special-card {
+            background: var(--insight-bg) !important;
+            border-color: var(--primary) !important;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>The Investment Learning Path</h1>
+            <p class="tagline">Master Stocks & Mutual Funds. Build Generational Wealth.</p>
+        </header>
+
+        <a href="investment_checklist.html" class="master-cta">
+            <h2>🚀 Master Investment Checklist</h2>
+            <p>The 5-Step Framework to use before buying any stock</p>
+        </a>
+
+        <div class="section-header">Getting Started</div>
+        <div class="topic-grid">
+            <a href="getting_started.html" class="topic-card special-card">
+                <span class="number">0</span>
+                <span class="title">How to Start (Tools & Apps)</span>
+            </a>
+        </div>
+
+        <div class="section-header">Fundamental Analysis</div>
+        <div class="topic-grid">
+            <a href="market_capitalization.html" class="topic-card">
+                <span class="number">1</span>
+                <span class="title">Market Capitalization</span>
+            </a>
+            <a href="earnings_per_share.html" class="topic-card">
+                <span class="number">2</span>
+                <span class="title">Earnings Per Share (EPS)</span>
+            </a>
+            <a href="price_to_earnings_ratio.html" class="topic-card">
+                <span class="number">3</span>
+                <span class="title">P/E Ratio</span>
+            </a>
+            <a href="industry_pe_ratio.html" class="topic-card">
+                <span class="number">4</span>
+                <span class="title">Industry P/E</span>
+            </a>
+            <a href="price_to_book_ratio.html" class="topic-card">
+                <span class="number">5</span>
+                <span class="title">Price-to-Book (P/B)</span>
+            </a>
+            <a href="book_value.html" class="topic-card">
+                <span class="number">6</span>
+                <span class="title">Book Value (BV)</span>
+            </a>
+            <a href="moat_and_management.html" class="topic-card">
+                <span class="number">7</span>
+                <span class="title">Moat & Management</span>
+            </a>
+            <a href="debt_to_equity_ratio.html" class="topic-card">
+                <span class="number">8</span>
+                <span class="title">Debt-to-Equity (D/E)</span>
+            </a>
+            <a href="dividend_yield.html" class="topic-card">
+                <span class="number">9</span>
+                <span class="title">Dividend Yield</span>
+            </a>
+            <a href="face_value.html" class="topic-card">
+                <span class="number">10</span>
+                <span class="title">Face Value (FV)</span>
+            </a>
+        </div>
+
+        <div class="section-header">Technical Analysis</div>
+        <div class="topic-grid">
+            <a href="moving_averages.html" class="topic-card">
+                <span class="number">11</span>
+                <span class="title">Moving Averages</span>
+            </a>
+            <a href="ma_crossovers.html" class="topic-card">
+                <span class="number">12</span>
+                <span class="title">MA Crossovers</span>
+            </a>
+            <a href="support_and_resistance.html" class="topic-card">
+                <span class="number">13</span>
+                <span class="title">Support & Resistance</span>
+            </a>
+            <a href="rsi.html" class="topic-card">
+                <span class="number">14</span>
+                <span class="title">RSI Momentum Indicator</span>
+            </a>
+            <a href="macd.html" class="topic-card">
+                <span class="number">15</span>
+                <span class="title">MACD Trend Indicator</span>
+            </a>
+            <a href="beta.html" class="topic-card">
+                <span class="number">16</span>
+                <span class="title">Beta (Volatility)</span>
+            </a>
+            <a href="delivery_volume.html" class="topic-card">
+                <span class="number">17</span>
+                <span class="title">Delivery Volume %</span>
+            </a>
+            <a href="fifty_two_week_high_low.html" class="topic-card">
+                <span class="number">18</span>
+                <span class="title">52-Week High & Low</span>
+            </a>
+        </div>
+
+        <div class="section-header">Risk & Psychology</div>
+        <div class="topic-grid">
+            <a href="portfolio_construction.html" class="topic-card">
+                <span class="number">19</span>
+                <span class="title">Portfolio Construction</span>
+            </a>
+            <a href="trading_psychology.html" class="topic-card">
+                <span class="number">20</span>
+                <span class="title">Trading Psychology</span>
+            </a>
+        </div>
+
+        <!-- Mutual Funds Section -->
+        <div style="margin-top: 60px; border-top: 3px solid var(--primary); padding-top: 20px;">
+            <h2 style="color: var(--primary); text-align: center; margin-bottom: 30px;">Module 2: Mutual Funds</h2>
+            <div class="section-header">Basics & Selection</div>
+            <div class="topic-grid">
+                <a href="mutual-funds/mf_basics.html" class="topic-card">
+                    <span class="number">1</span>
+                    <span class="title">What is a Mutual Fund?</span>
+                </a>
+                <a href="mutual-funds/mf_direct_vs_regular.html" class="topic-card special-card">
+                    <span class="number">2</span>
+                    <span class="title">Direct vs Regular (Crucial)</span>
+                </a>
+                <a href="mutual-funds/mf_active_vs_passive.html" class="topic-card">
+                    <span class="number">3</span>
+                    <span class="title">Active vs Passive Funds</span>
+                </a>
+            </div>
+
+            <div class="section-header">Planning & Taxes</div>
+            <div class="topic-grid">
+                <a href="mutual-funds/mf_categories.html" class="topic-card">
+                    <span class="number">4</span>
+                    <span class="title">Categories (Large to Small)</span>
+                </a>
+                <a href="mutual-funds/mf_sip_vs_lumpsum.html" class="topic-card">
+                    <span class="number">5</span>
+                    <span class="title">SIP vs Lumpsum</span>
+                </a>
+                <a href="mutual-funds/mf_taxation.html" class="topic-card">
+                    <span class="number">6</span>
+                    <span class="title">Taxation & Harvesting</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            This module is for educational purposes only. Always consult a SEBI registered advisor before investing.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
